@@ -8,7 +8,7 @@ import MissionSection from "./component/web/MissionSection";
 import NewsSection from "./component/web/NewsSection";
 import PaymentGatewaysSection from "./component/web/PaymentGatewaysSection";
 import NewFrontierSection from "./component/web/NewFrontSection";
-import AffiliateMarketingSection from "./component/web/AffiliateMarketingSection";
+import AffiliateMarketingSection from "./component/web/Affiated";
 
 const page = () => {
   return (

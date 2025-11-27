@@ -3,6 +3,7 @@ import { useState } from "react";
 import React from "react";
 import logo from "../../public/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -61,7 +62,7 @@ const Header = () => {
             <a
               href="#"
               className="text-white hover:text-blue-300 font-medium transition duration-200">
-              WHOWEARE
+              WHO WE ARE
             </a>
 
             {/* SERVICES Dropdown */}
@@ -167,16 +168,16 @@ const Header = () => {
               className="text-white hover:text-blue-300 font-medium transition duration-200">
               PLANS
             </a>
-            <a
-              href="#"
+            <Link
+              href="/login"
               className="text-white hover:text-blue-300 font-medium transition duration-200">
               LOGIN
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/signup"
               className="text-white hover:text-blue-300 font-medium transition duration-200">
               SIGNUP
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

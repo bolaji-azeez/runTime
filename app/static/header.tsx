@@ -311,18 +311,18 @@ const Header = () => {
 
           {/* Auth Options */}
           <div className="border-t border-gray-200">
-            <a
-              href="#"
+            <Link
+              href="/login"
               className="flex items-center px-4 h-14 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition duration-200 border-b border-gray-100"
               onClick={() => setMobileMenuOpen(false)}>
               LOGIN
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/signup"
               className="flex items-center px-4 h-14 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition duration-200"
               onClick={() => setMobileMenuOpen(false)}>
               SIGNUP
-            </a>
+            </Link>
           </div>
         </div>
       </div>

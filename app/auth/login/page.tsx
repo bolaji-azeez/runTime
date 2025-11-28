@@ -3,7 +3,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import SignupBanner from "../component/web/SignupBanner";
+import SignupBanner from "../../component/web/SignupBanner";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -12,11 +12,29 @@ export default function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Validate inputs
+    if (!email || !password) {
+      alert("Please fill in all fields");
+      return;
+    }
+
     // TODO: replace with real auth call
     console.log("login attempt:", { email, password });
 
-    // Example: navigate to dashboard on success
-    // (change target route to wherever you want)
+    // Mock successful login - in production, verify credentials with backend
+    const userData = {
+      email: email,
+      fullName: email.split("@")[0], // Extract name from email for demo
+      username: email.split("@")[0],
+    };
+
+    // Store auth token and user data
+    document.cookie = `authToken=demo_token_${Date.now()}; path=/; max-age=86400`;
+    localStorage.setItem("authToken", `demo_token_${Date.now()}`);
+    localStorage.setItem("user", JSON.stringify(userData));
+
+    // Navigate to dashboard
     router.push("/dashboard");
   };
 

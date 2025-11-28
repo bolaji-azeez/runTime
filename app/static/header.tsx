@@ -169,12 +169,12 @@ const Header = () => {
               PLANS
             </a>
             <Link
-              href="/login"
+              href="/auth/login"
               className="text-white hover:text-blue-300 font-medium transition duration-200">
               LOGIN
             </Link>
             <Link
-              href="/signup"
+              href="/auth/signup"
               className="text-white hover:text-blue-300 font-medium transition duration-200">
               SIGNUP
             </Link>
@@ -312,13 +312,13 @@ const Header = () => {
           {/* Auth Options */}
           <div className="border-t border-gray-200">
             <Link
-              href="/login"
+              href="/auth/login"
               className="flex items-center px-4 h-14 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition duration-200 border-b border-gray-100"
               onClick={() => setMobileMenuOpen(false)}>
               LOGIN
             </Link>
             <Link
-              href="/signup"
+              href="/auth/signup"
               className="flex items-center px-4 h-14 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition duration-200"
               onClick={() => setMobileMenuOpen(false)}>
               SIGNUP
